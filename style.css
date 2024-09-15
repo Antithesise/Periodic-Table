@@ -1,0 +1,148 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: black;
+	cursor: default;
+}
+
+div#periodic-table-of-elements {
+	width: fit-content;
+	height: fit-content;
+    position: fixed;
+	margin: 0;
+    top: 50.2%;
+    left: 49.8%;
+    transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+div#cover {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	display: block;
+	background-color: black;
+	top: 0;
+	left: 0;
+	z-index: -100;
+	opacity: 0%;
+	transition: all 0.5s;
+}
+
+a.element:focus ~ div#cover {
+	z-index: 900;
+	opacity: 50%;
+}
+
+div.row {
+	display: inline-block;
+	width: max-content;
+	position: relative;
+	margin: 0;
+}
+
+a.element, a.placeholder, div.spacer {
+	font-size: 8px;
+	text-align: center;
+	height: 52px;
+	width: 52px;
+	background: black;
+	position: relative;
+	float: left;
+	margin: 0;
+	margin-left: 4px;
+	border: 2px solid black;
+	overflow: hidden;
+	z-index: 0;
+	transition: all 0.2s;
+}
+
+a.element:hover {
+	transform: scale(1.4, 1.4);
+	z-index: 1000;
+}
+
+a.element:focus {
+	transform: scale(3, 3);
+	z-index: 1500;
+	transition: all 0.5s
+}
+
+a.element h1 {
+	margin: 0px;
+	margin-top: -4px;
+	margin-bottom: -1px;
+	font-size: 25px;
+	font-weight: lighter;
+}
+
+a.placeholder h1 {
+	margin: 0px;
+	margin-bottom: 0.75px;
+	font-size: 20px;
+	font-weight: lighter;
+}
+
+a.alkali-metals {
+	color: rgb(255, 165, 0);
+	border: 2px solid rgb(255, 165, 0);
+	text-shadow: 0 0 5px rgb(255, 165, 0);
+	filter: grayscale(30%);
+}
+a.alkaline-earth-metals {
+	color: rgb(202,202,57);
+	border: 2px solid rgb(202,202,57);
+	text-shadow: 0 0 5px rgb(202,202,57);
+}
+
+a.lanthanides {
+	color: rgb(221,116,169);
+	border: 2px solid rgb(221,116,169);
+	text-shadow: 0 0 5px rgb(221,116,169);
+}
+
+a.actinides {
+	color: rgb(141,116,189);
+	border: 2px solid rgb(141,116,189);
+	text-shadow: 0 0 5px rgb(141,116,189);
+}
+
+a.placeholder {
+	filter: opacity(75%) grayscale(40%);
+}
+
+a.transition-metals {
+	color: rgb(205,102,84);
+	border: 2px solid rgb(205,102,84);
+	text-shadow: 0 0 5px rgb(205,102,84);
+}
+
+a.post-transition-metals {
+	color: rgb(15,192,195);
+	border: 2px solid rgb(15,192,195);
+	text-shadow: 0 0 5px rgb(15,192,195);
+}
+
+a.metalloids {
+	color: rgb(102, 205, 170);
+	border: 2px solid rgb(102, 205, 170);
+	text-shadow: 0 0 5px rgb(102, 205, 170);
+	filter: grayscale(10%);
+}
+
+a.other-nonmetals {
+	color: rgb(43,187,43);
+	border: 2px solid rgb(43,187,43);
+	text-shadow: 0 0 5px rgb(43,187,43);
+}
+
+a.noble-gases {
+	color: rgb(112,147,207);
+	border: 2px solid rgb(112,147,207);
+	text-shadow: 0 0 5px rgb(112,147,207);
+}
+
+a.unknowns {
+	color: rgb(179, 179, 179);
+	border: 2px solid rgb(179, 179, 179);
+	text-shadow: 0 0 5px rgb(179, 179, 179);
+}
